@@ -1,13 +1,14 @@
 import React, {
-Fragment,
+
 Component
   } from 'react';
+import 'Sidebar/sidebar.css' 
 // import {Link} from "react-router-dom"; use after Router is add
 
 
 class Sidebar extends Component {  
     render(){
-      return <Fragment>
+      return <div className="sidebar">
         {/* <h1>wyszukaj posiłek</h1><Link></link>
         <h1>wyszukaj trening</h1><Link></link>
         <h1>zaplanuj trening ze znajomym</h1><link></link> */}
@@ -17,7 +18,7 @@ class Sidebar extends Component {
         <p><a href="/search">ZAPLANUJ TRENING ZE ZNAJOMYM</a></p>
         <button type = "logout" >WYLOGUJ</button>
         
-        </Fragment>
+        </div>
         
         
         
