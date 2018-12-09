@@ -1,0 +1,11 @@
+sidebar {
+    background: #ff7500;
+    font: white;
+    min-width: 200 px;
+    max-width: 400 px;
+    margin: 2px;
+    padding: 10px;
+    position: left;
+
+}
+
