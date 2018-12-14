@@ -1,7 +1,13 @@
-.AppBar{
+.appBar{
  background: #ff7500;
- 
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
 }
+.item {
+    width: 10em;
+}
+
 .logo{
     height: 4em;
  

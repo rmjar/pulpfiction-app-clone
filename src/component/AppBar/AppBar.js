@@ -1,9 +1,7 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import './AppBar.css'
-import logo from './avatar.png';
+import logo from 'assets/avatar.png';
 
 const userName = "Tomek"
 
@@ -25,12 +23,11 @@ class AppBar extends Component {
       isSignedIn 
     } = this.state;
     return <div className = {
-        classNames('AppBar')
+        classNames('appBar')
       } >
-      <div className = { classNames('logo')}>
-        <img src={logo}/>
-      </div>
-      <div  onClick={this.handleClick}>{!isSignedIn ? "log in": `witaj ${userName}`}</div>
+      <div className = { classNames('logo', 'item')}>
+        <img src={logo} alt='' /></div>
+      <div onClick={this.handleClick} className='item'> {!isSignedIn ? "Log in": `witaj ${userName}`}</div>
       </div>
   }
 }
