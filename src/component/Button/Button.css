@@ -1,0 +1,27 @@
+.button{
+    background-color:#b3b3cc;
+    color:white;
+    margin:10px;
+}
+
+.button:hover{
+    background-color:white;
+    color:#b3b3cc;
+}
+
+.buttonBorder{
+    border: 1px solid white;
+}
+
+.buttonBorder:hover{
+    border: 1px solid #b3b3cc;
+}
+
+.buttonMedium{
+    padding:0.5rem 1rem;
+}
+
+.link{
+    text-decoration: none;
+
+}
