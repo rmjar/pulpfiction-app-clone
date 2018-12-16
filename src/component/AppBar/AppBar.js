@@ -6,7 +6,7 @@ import logo from 'assets/avatar.png';
 const userName = "Tomek"
 
 class AppBar extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       isSignedIn: false
@@ -14,21 +14,19 @@ class AppBar extends Component {
 
   }
   handleClick = (event) => {
-    this.setState((prevState) =>({
+    this.setState((prevState) => ({
       isSignedIn: !prevState.isSignedIn
     }))
   }
   render() {
-    const {
-      isSignedIn 
-    } = this.state;
-    return <div className = {
-        classNames('appBar')
-      } >
-      <div className = { classNames('logo', 'item')}>
+    const { isSignedIn } = this.state;
+    return <div className={
+      classNames('appBar')
+    } >
+      <div className={classNames('logo', 'item')}>
         <img src={logo} alt='' /></div>
-      <div onClick={this.handleClick} className='item'> {!isSignedIn ? "Log in": `witaj ${userName}`}</div>
-      </div>
+      <div onClick={this.handleClick} className='item'> {!isSignedIn ? "Log in" : `witaj ${userName}`}</div>
+    </div>
   }
 }
 
