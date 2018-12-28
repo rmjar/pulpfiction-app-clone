@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link , BrowserRouter as Router, Route
-} from "react-router-dom";
+import { Link , BrowserRouter as Router} from "react-router-dom";
 import classnames from "classnames";
 import "./Button.css"
 

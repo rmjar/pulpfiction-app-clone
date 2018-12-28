@@ -2,6 +2,9 @@ import React,{Component} from "react";
 
 export default class TreningsView extends Component{
     render(){
-        return <></>
+        const {training} = this.props;
+        return <div>
+            
+        </div>
     }
 }

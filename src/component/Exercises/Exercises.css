@@ -1,0 +1,17 @@
+.MainPanel{
+    display:flex;
+    justify-content: center;
+    
+}
+
+.image{
+    flex-basis: 400px;
+}
+
+.ContainerExercise{
+    width:60%;
+    margin-left:auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import classNames from 'classnames';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import './Sidebar.css'
 
 
