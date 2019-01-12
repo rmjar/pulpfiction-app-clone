@@ -1,3 +1,7 @@
+# JFDZW2-PulpFiction-app
+React application.
+http://app.pulp-fiction.jfdzw2.is-academy.pl/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
