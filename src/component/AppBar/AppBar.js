@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import './AppBar.css'
-import logo from 'assets/avatar.png';
+import logo from './../../assets/avatar.png';
 
 const userName = "Tomek"
 
