@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import classnames from "classnames";
 import "./ListItem.css"
 
 export default class ListItem extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
-        const { item } = this.props;
+        const { item, exercise } = this.props;
         return (
-            <div className={classnames('ListItem')}>{item.name}</div>
+            <div className={classnames('ListItem')}><Link to={!exercise ? "/trainings/"+ item.uuid:"/exercises/"+item.uuid}>{item.name}</Link></div>
         );
     }
 }
