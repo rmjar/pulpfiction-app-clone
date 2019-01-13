@@ -1,0 +1,8 @@
+.ListView{
+    width:40%;
+    margin-left:15%;
+    margin-top:2rem;
+    border: 3px solid #b3b3cc;
+    border-radius: 10px;
+    height: min-content;
+}

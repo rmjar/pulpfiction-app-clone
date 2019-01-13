@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import Charts from './component/Charts';
 import AppBar from './component/AppBar';
 import Sidebar from './component/Sidebar';
-import Favourites from './component/Favourites';
+import HomeUser from './component/HomeUser/HomeUser';
+import Training from './component/Trainings';
+import Exercises from './component/Exercises';
+import Charts from './component/Charts';
+import Favourites from './component/Favourites'
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -35,7 +38,12 @@ class App extends Component {
             <Route path='/' component={AppBar} />
             <Route path='/' component={Sidebar} />
             <Route exact path='/' render={(props) => <Charts width="480" height="400" radius="180" {...props} />} />
+            <Route path="/" exact component={HomeUser} />
+            <Route path="/trainings/:trainingId?" component={Training} />
+            <Route path="/exercises/:exerciseId?" component={Exercises} />
             <Route path='/favourites/:uuid?' render={(props) => <Favourites favourites={favourites}{...props} />} />
+
+            {/* <Route path="/" component={Footer} /> */}
           </Fragment>
         </Router>
       </div>
