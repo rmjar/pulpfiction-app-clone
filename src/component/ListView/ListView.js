@@ -26,13 +26,13 @@ export default class ListView extends Component {
                 <div>
                     {list.map((elem,index) => {
                         if (type === "training")
-                            return <ListItem key={elem.uuid} item={elem} exercise={exercise} />
+                            return <ListItem key={elem.uuid} item={elem} exercise={exercise} index={index} category="training"/>
                         else if(type=== "exercise")
                             return <ListItem key={elem.exerciseId+index} 
-                            item={exercises.find( x => x.uuid === elem.exerciseId)} exercise={exercise} />
+                            item={exercises.find( x => x.uuid === elem.exerciseId)} exercise={exercise} index={index} category="exercise"/>
                             else if(type === "meal")
                             {
-                                return <MealListItem key={index} item={elem}></MealListItem>
+                                return <MealListItem key={index} item={elem} index={index} category="meal"></MealListItem>
                             }
                         })}
                 </div>

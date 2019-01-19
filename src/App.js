@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AppBar from './component/AppBar';
-import {Route, BrowserRouter as Router} from "react-router-dom"
+import { Route, BrowserRouter as Router } from "react-router-dom"
 import HomeUser from './component/HomeUser/HomeUser';
 import Training from './component/Trainings';
 import Exercises from './component/Exercises';
@@ -10,7 +10,20 @@ import Exercises from './component/Exercises';
 
 
 class App extends Component {
+  componentDidMount() {
+    fetch('https://pulp-fitness.firebaseio.com/config.json', {
+      method: 'GET'
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ config: data });
+      });
+    
+     
+  }
+
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Router>

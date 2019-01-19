@@ -1,0 +1,6 @@
+{
+    "languages":["pl", "en_US"],
+    "animation" : {
+        "duration":1000
+    }
+}
