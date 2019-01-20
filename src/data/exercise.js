@@ -952,4 +952,5 @@ var exercises = [
     "exerciseType": "timeOfExercise"
   }
 ]
+
 export default exercises

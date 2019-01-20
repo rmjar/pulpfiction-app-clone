@@ -1,12 +1,11 @@
 import React, { Component } from "react"
-import exercises from "./../../data/exercise"
 import "./Exercises.css"
 import classnames from "classnames"
 
 export default class Exercises extends Component {
 
     componentDidMount() {
-        fetch('https://pulp-fitness.firebaseio.com/trainings.json', {
+        fetch('https://pulp-fitness.firebaseio.com/exercises.json', {
             method: 'GET'
         })
             .then(response => response.json())
@@ -14,15 +13,16 @@ export default class Exercises extends Component {
                 this.setState({ exercises: data });
             });
     }
+
     findById = ({ uuid }) => {
-        const { match: { params: { exersiceId } } } = this.props;
-        return uuid === exersiceId || exersiceId === undefined
+        const { match: { params: { exerciseId } } } = this.props;
+        return uuid === exerciseId || exerciseId === undefined
     }
 
     render() {
         const { match: { params: { exerciseId } } } = this.props;
-        const { exercises } = this.state
         if (this.state !== null) {
+            const { exercises } = this.state;
             const exercise = exercises.find(x => x.uuid === exerciseId);
             return <div className={classnames('ContainerExercise')}>
                 <div className={classnames('MainPanel')}>

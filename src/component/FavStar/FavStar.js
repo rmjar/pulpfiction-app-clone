@@ -21,7 +21,7 @@ class FavStar extends Component {
       });
   }
 
-  addToFav(cat, id) {
+  addToFav = (cat, id) => {
     const data = {
       category: cat,
       referenceId: id,
@@ -35,7 +35,7 @@ class FavStar extends Component {
       .then(response => response.json());
   }
 
-  removeFromFav(cat, id) {
+  removeFromFav = (cat, id) => {
     const data = {
       deleted: true
     }
