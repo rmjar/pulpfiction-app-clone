@@ -36,10 +36,15 @@ class FavStar extends Component {
   }
 
   removeFromFav(cat, id) {
+    const data = {
+      deleted: true
+    }
 
     const favId = this.state.favs.find(fav => fav.category === cat && fav.referenceId === id && fav.userId === 1).key;
-    fetch('https://pulp-fitness.firebaseio.com/fav' + favId +'.json', {
-      method: 'DELETE',
+    console.log(favId);
+    fetch('https://pulp-fitness.firebaseio.com/fav/' + favId +'.json', {
+      method: 'PATCH',
+      body: JSON.stringify(data)
     })
       .then(response => response.json());
   }
