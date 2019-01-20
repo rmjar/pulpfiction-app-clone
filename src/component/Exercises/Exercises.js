@@ -20,6 +20,7 @@ export default class Exercises extends Component {
     }
 
     render() {
+        console.log(this.props)
         const { match: { params: { exerciseId } } } = this.props;
         if (this.state !== null) {
             const { exercises } = this.state;

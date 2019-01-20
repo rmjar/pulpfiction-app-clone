@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router } from "react-router-dom"
 import HomeUser from './component/HomeUser/HomeUser';
 import Training from './component/Trainings';
 import Exercises from './component/Exercises';
-
+import Sidebar from './component/Sidebar'
 
 
 
@@ -29,6 +29,7 @@ class App extends Component {
         <Router>
           <>
             <Route path="/" component={AppBar} />
+            <Route path="/" component={Sidebar} />
             <Route path="/" exact component={HomeUser} />
             <Route path="/trainings/:trainingId?" component={Training} />
             <Route path="/exercises/:exerciseId?" component={Exercises} />

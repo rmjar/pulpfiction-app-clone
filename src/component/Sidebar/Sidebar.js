@@ -6,16 +6,14 @@ import './Sidebar.css'
 class Sidebar extends Component {
   render() {
     return (
-      <Router>
-        <div className="sidebar">
-          <div className="sidebar__title">Navigation</div>
-          <div className="sidebar__content">
-            <p><Link to="/search">ZAPLANUJ DIETĘ</Link></p>
-            <p><Link to="/search">WYSZUKAJ TRENING</Link></p>
-            <p><Link to="/search">ZAPLANUJ TRENING ZE ZNAJOMYM</Link></p>
-          </div>
+      <div className="sidebar">
+        <div className="sidebar__title">Navigation</div>
+        <div className="sidebar__content">
+          <p><Link to="/search">ZAPLANUJ DIETĘ</Link></p>
+          <p><Link to="/search">WYSZUKAJ TRENING</Link></p>
+          <p><Link to="/search">ZAPLANUJ TRENING ZE ZNAJOMYM</Link></p>
         </div>
-      </Router>)
+      </div>)
 
   }
 
