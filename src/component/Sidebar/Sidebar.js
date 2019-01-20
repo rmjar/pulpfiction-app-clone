@@ -29,10 +29,9 @@ class Sidebar extends Component {
       <div className={classNames('sidebar', { sidebar__shown: !this.state.hidden })} onClick={this.handleClick}>
         <div className="sidebar__title" onClick={this.handleClick}>Navigation</div>
         <div className="sidebar__content" onClick={this.handleClickContent}>
-          <p><NavLink to="/favourites">FAVOURITES</NavLink></p>
-          <p><Link to="/search">ZAPLANUJ DIETĘ</Link></p>
-          <p><Link to="/search">WYSZUKAJ TRENING</Link></p>
-          <p><Link to="/search">ZAPLANUJ TRENING ZE ZNAJOMYM</Link></p>
+          <p><Link className="sidebar__link" to="/">Home</Link></p>
+          <p><NavLink className="sidebar__link" to="/favourites">Favourite Exercises</NavLink></p>
+          <p><Link className="sidebar__link" to="/trainings">Your Trainings</Link></p>
         </div>
       </div>
     )

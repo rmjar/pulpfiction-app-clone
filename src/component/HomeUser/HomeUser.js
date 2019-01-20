@@ -11,7 +11,6 @@ import "./HomeUsers.css"
 export default class HomeUser extends Component {
     render() {
         return <>
-            <Sidebar />
             <div className={classnames('HomeListViewsContainer')}>
                 <ListView header="Polecane treningi" list={trainings} type="training" />
                 <ListView header="Polecane posiłki" list={meals} type="meal"/>

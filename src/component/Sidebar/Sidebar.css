@@ -1,12 +1,12 @@
 .sidebar {
-    background: #ff7500;
+    background: #555;
     color: white;
     border: solid white;
     border-radius: 0px 4px 4px 0px;
     border-width: 0px 4px 0px 0px;
     left: calc(-20% - 4px);
     padding: 4px 4px 4px 0px;
-    position: absolute;
+    position: fixed;
     top: 4em;
     transition: transform 0.4s;
     height: calc(100% - 4.9em);
@@ -25,7 +25,7 @@
 }
 
 .sidebar .sidebar__title {
-    background: #ff7500;
+    background: #555;
     color: white;
     border: solid white;
     border-radius: 0px 0px 4px 4px;
@@ -41,4 +41,9 @@
     transform-origin: 50% 0;
     width: 10em;
     height: 1.6em;
+}
+
+.sidebar__content .sidebar__link {
+    text-decoration: none;
+    color: white;
 }

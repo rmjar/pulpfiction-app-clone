@@ -55,8 +55,6 @@ class App extends Component {
             <Route path="/trainings/:trainingId?" component={Training} />
             <Route path="/exercises/:exerciseId?" component={Exercises} />
             <Route path='/favourites/:uuid?' render={(props) => <Favourites favourites={favourites}{...props} />} />
-
-            {/* <Route path="/" component={Footer} /> */}
           </Fragment>
         </Router>
       </div>

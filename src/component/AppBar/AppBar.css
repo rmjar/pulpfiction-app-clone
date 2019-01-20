@@ -3,19 +3,18 @@
  display: flex;
  justify-content: space-around;
  align-items: center;
+ position: sticky;
+ top: 0;
 }
+
 .item {
     width: 10em;
 }
 
 .logo{
     height: 4em;
- 
-    
 }
+
 .logo img {
     height: 100%;
-    
-
-
 }
