@@ -1,19 +1,41 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
+import classNames from 'classnames';
 import './Sidebar.css'
 
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      hidden: true,
+    }
+  }
+
+  handleClick = (event) => {
+    event.stopPropagation()
+    this.setState({
+      hidden: !this.state.hidden,
+    })
+    console.log(this.state)
+  }
+
+  handleClickContent = (event) => {
+    event.stopPropagation();
+  }
+
   render() {
     return (
-      <div className="sidebar">
-        <div className="sidebar__title">Navigation</div>
-        <div className="sidebar__content">
+      <div className={classNames('sidebar', { sidebar__shown: !this.state.hidden })} onClick={this.handleClick}>
+        <div className="sidebar__title" onClick={this.handleClick}>Navigation</div>
+        <div className="sidebar__content" onClick={this.handleClickContent}>
+          <p><NavLink to="/favourites">FAVOURITES</NavLink></p>
           <p><Link to="/search">ZAPLANUJ DIETĘ</Link></p>
           <p><Link to="/search">WYSZUKAJ TRENING</Link></p>
           <p><Link to="/search">ZAPLANUJ TRENING ZE ZNAJOMYM</Link></p>
         </div>
-      </div>)
+      </div>
+    )
 
   }
 

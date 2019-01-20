@@ -12,7 +12,6 @@ export default class HomeUser extends Component {
     render() {
         return <>
             <Sidebar />
-            <Charts width="480" height="400" radius="180" />
             <div className={classnames('HomeListViewsContainer')}>
                 <ListView header="Polecane treningi" list={trainings} type="training" />
                 <ListView header="Polecane posiłki" list={meals} type="meal"/>
