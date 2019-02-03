@@ -15,6 +15,9 @@
 .logo{
     height: 4em;
 }
+.logo:hover{
+    cursor: pointer;
+}
 
 .logo img {
     height: 100%;
