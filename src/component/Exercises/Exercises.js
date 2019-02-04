@@ -27,7 +27,7 @@ export default class Exercises extends Component {
             const exercise = exercises.find(x => x.uuid === exerciseId);
             return <div className={classnames('ContainerExercise')}>
                 <div className={classnames('MainPanel')}>
-                    <img src={exercise.imagesOrVideos[0].url} width="400px"></img>
+                    <img src={exercise.imagesOrVideos[0].url} width="400px" alt="Exercise"></img>
                     <h1>{exercise.name}</h1>
                 </div>
                 <div>
