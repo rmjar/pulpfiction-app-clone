@@ -9,7 +9,7 @@
     position: fixed;
     top: 4em;
     transition: transform 0.4s;
-    height: calc(100% - 4.9em);
+    height: calc(100% - 4.1em);
     width: 20%;
     min-width: 100px;
     z-index: 10;
