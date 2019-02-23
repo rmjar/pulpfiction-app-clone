@@ -17,7 +17,6 @@ class Sidebar extends Component {
     this.setState({
       hidden: !this.state.hidden,
     })
-    console.log(this.state)
   }
 
   handleClickContent = (event) => {
