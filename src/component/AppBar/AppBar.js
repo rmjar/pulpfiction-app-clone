@@ -1,40 +1,56 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { Redirect, Link } from 'react-router-dom'
 import './AppBar.css'
 import logo from './../../assets/avatar.png';
+import { connect } from 'react-redux';
 
-const userName = "Tomek"
+
+import LoginLinks from './LoginLinks';
+import LogoutLinks from './LogoutLinks';
+import { auth } from '../../config/fbConfig';
+
 
 class AppBar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isSignedIn: false
-    }
 
+  unsubscribeAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeAuth = auth.onAuthStateChanged((user) => {
+      if (user) {
+
+      } else {
+
+      }
+    })
   }
-  handleClick = (event) => {
-    this.setState((prevState) => ({
-      isSignedIn: !prevState.isSignedIn
-    }))
+
+  componentWillUnmount = () => {
+    if (this.unsubscribeAuth) {
+      this.unsubscribeAuth();
+      this.unsubscribeAuth = null;
+    }
   }
 
   clickOnLogoHandler = () => {
-    console.log(this);
-   this.props.history.push("/");
+    this.props.history.push("/");
   }
 
   render() {
-    const { isSignedIn } = this.state;
-    return <div className={
-      classNames('appBar')
-    } >
+    return <div className={classNames('appBar')} >
       <div className={classNames('logo', 'item')} onClick={() => this.clickOnLogoHandler()}>
-        <img src={logo} alt='' /></div>
-      <div onClick={this.handleClick} className='item'> {!isSignedIn ? "Log in" : `witaj ${userName}`}</div>
+        <img src={logo} alt='' />
+      </div>
+      <div onClick={this.handleClick} className='item'>
+        {!auth.currentUser ? <LogoutLinks /> : <LoginLinks />}
+      </div>
     </div>
   }
 }
 
-export default AppBar;
+const mapStateToProps = (state) => {
+  return {
+    profile: state.firebase.profile,
+  }
+}
+
+export default connect(mapStateToProps, null)(AppBar);

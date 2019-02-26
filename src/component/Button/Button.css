@@ -1,27 +1,42 @@
-.button{
-    background-color:#b3b3cc;
-    color:white;
-    margin:10px;
+.button {
+    display: inline;
+    background-color: #b3b3cc;
+    color: white;
+    margin: 10px;
 }
 
-.button:hover{
-    background-color:white;
-    color:#b3b3cc;
+.buttonDarken {
+    filter: brightness(60%);
 }
 
-.buttonBorder{
+.button:hover {
+    background-color: white;
+    color: #b3b3cc;
+}
+
+.buttonDarken:hover {
+    background-color: #b3b3cc;
+    color: white;
+    filter: brightness(60%);
+}
+
+.buttonBorder {
     border: 1px solid white;
 }
 
-.buttonBorder:hover{
+.buttonBorder:hover {
     border: 1px solid #b3b3cc;
 }
 
-.buttonMedium{
-    padding:0.5rem 1rem;
+.buttonMedium {
+    padding: 0.5rem 1rem;
 }
 
-.link{
+.buttonRounded {
+    border-radius: 50%
+}
+
+.link {
     text-decoration: none;
 
 }

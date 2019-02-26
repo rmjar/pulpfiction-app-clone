@@ -1,24 +1,39 @@
-.appBar{
- background: #ff7500;
- display: flex;
- justify-content: space-around;
- align-items: center;
- position: sticky;
- top: 0;
- z-index: 10;
+.appBar {
+    background: #ff7500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .item {
-    width: 10em;
+    width: 40em;
 }
 
-.logo{
+.logo {
     height: 4em;
 }
-.logo:hover{
+
+.logo:hover {
     cursor: pointer;
 }
 
 .logo img {
     height: 100%;
+}
+
+.appBar ul {
+    
+}
+
+.appBar li {
+    list-style: none;
+    display: inline;
+
+}
+
+.appBar li a {
+    text-decoration: none;
 }
