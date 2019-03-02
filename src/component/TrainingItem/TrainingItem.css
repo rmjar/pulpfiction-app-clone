@@ -1,0 +1,17 @@
+.TrainingItem{
+    border-bottom: solid 2px rgb(91, 92, 92);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:1rem;
+}
+
+.TrainingItem:hover{
+    background-color: rgb(240, 238, 238);
+    cursor: pointer; 
+}
+
+.TrainingItemName{
+    font-weight: bold;
+    font-size:1.5rem;
+}

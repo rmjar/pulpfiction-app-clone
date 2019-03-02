@@ -17,26 +17,24 @@ export default class ListView extends Component {
         //list - lista elementów listy
         //exercise (boolean) czy ćwiczenie
         //type(exercise,training,meal)
-        const { fullList, header, list, exercise, type } = this.props;
+        const { fullList, header, changeIndexNext, changeIndexPrevious, metadata:{length, currentCard, numberOfCard}} = this.props;
         return (<div className={classnames('ListView')}>
             <div>
                 <div>
-                    <h3>{header}</h3>
+                    <h1>{header}</h1>
                 </div>
                 <div>
-                    {list.map((elem,index) => {
-                        if (type === "training")
-                            return <ListItem key={elem.uuid} item={elem} exercise={exercise} index={index} category="training"/>
-                        else if(type=== "exercise")
-                            return <ListItem key={elem.exerciseId+index} 
-                            item={exercises.find( x => x.uuid === elem.exerciseId)} exercise={exercise} index={index} category="exercise"/>
-                            else if(type === "meal")
-                            {
-                                return <MealListItem key={index} item={elem} index={index} category="meal"></MealListItem>
-                            }
-                        })}
+                    {this.props.render()}
                 </div>
                 {!fullList && <Button content="Pokaż więcej" />}
+                <div className={classnames('ChangeShowingRecords')}>
+                    <div>Liczba pozycji: {length}</div>
+                    <div><b>{currentCard}/{numberOfCard}</b></div>
+                </div>
+                <div className={classnames('ChangeShowingRecords')}>
+                    {currentCard>1 && <div className={classnames('PrevNextButton')} onClick={()=>changeIndexPrevious()}>Poprzedni</div>}
+                    {currentCard<numberOfCard && <div className={classnames('PrevNextButton')} onClick={()=>changeIndexNext()}>Następny</div>}
+                </div>
             </div>
         </div>);
     }

@@ -1,5 +1,23 @@
 .Container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.AddTraining{
+        background-color: gray;
+    padding:1rem 2rem;
+    color:white;
+    border-radius: 10px;
+}
+
+.AddTrainingSection{
+    margin:1rem;
+    display: flex;
+    justify-content: flex-end;
+    width:80%;
+}
+
+.AddTrainingSection:hover{
+    cursor: pointer;
 }
